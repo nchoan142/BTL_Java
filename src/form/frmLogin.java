@@ -19,8 +19,10 @@ public class frmLogin {
 
 	public frmLogin() throws ClassNotFoundException {
 		JFrame frame = new JFrame("Login Window");
+		
 		JLabel lblUsernamename = new JLabel("Tên đăng nhập:");
 		lblUsernamename.setBounds(50, 100, 100, 30);
+		
 		JLabel lblPassword = new JLabel("Mật khẩu:");
 		lblPassword.setBounds(50, 150, 100, 30);
 
@@ -42,7 +44,6 @@ public class frmLogin {
 			public void actionPerformed(ActionEvent e) {
 				username = tfUsername.getText();
 				String password = new String(ptPassword.getPassword());
-//				String user_name = "";
 				String pass_word = "";
 				Connection cnt = null;
 				PreparedStatement stm = null;
@@ -56,7 +57,6 @@ public class frmLogin {
 						
 						// Lấy password tương ứng với username
 						while (rs.next()) {
-//							user_name = rs.getString("user_name");
 							pass_word = rs.getString("pass_word");
 						}
 					}

@@ -61,36 +61,6 @@ public class frmSearch extends javax.swing.JFrame {
 		return itemName;
 	}
 
-//	void setListItemAddedd(Vector listTtemAdded) {
-//		this.listTtemAdded = listTtemAdded;
-//	}
-//	
-//	public static Vector<String> getListItemAddedd() {
-//		return listTtemAdded;
-//	}
-//	 Hàm trả về danh sách sản phẩm đã được thêm vào giỏ hàng 
-//	public static Vector<Vector> createListTtemAdded() {
-//		Vector<Vector> listTtemAdded = new Vector();
-//		try {	
-//			for(int i = 0; i < listItem.size(); i++) {
-//				Vector itemAdded = new Vector();
-//				if(itemCount[i] > 0) {
-//					itemAdded.add(listItem.get(i));
-//					itemAdded.add(itemCount[i]);
-//					itemAdded.add(vListPriceItem.get(i));
-//					int totolMoney = itemCount[i] *(int) vListPriceItem.get(i);
-//					itemAdded.add(totolMoney);
-//				} else {
-//					continue;
-//				}
-//					listTtemAdded.add(itemAdded);
-//			}		
-//		} catch (Exception ex) {
-//			ex.printStackTrace();
-//		}
-//		System.out.println("ListItemAdded: " + listTtemAdded);
-//		return listTtemAdded;
-//	}
 	private void displayDetails(int selectIndex) {
 		Vector vSelectedRow = (Vector) data.get(selectIndex);
 		String itemName = (String) vSelectedRow.get(0);
@@ -129,7 +99,7 @@ public class frmSearch extends javax.swing.JFrame {
             }
         });
 
-        setTitle("WindowResult");
+        setTitle("frmSearch");
         addWindowListener(new java.awt.event.WindowAdapter() {
             public void windowClosed(java.awt.event.WindowEvent evt) {
                 formWindowClosed(evt);
@@ -360,31 +330,10 @@ public class frmSearch extends javax.swing.JFrame {
     }//GEN-LAST:event_formWindowOpened
 
     private void formWindowClosed(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowClosed
-//		System.out.println(dataTable.getRowCount());
-//		dataTable.setRowCount(0);
-//		System.out.println(dataTable.getRowCount());
+
     }//GEN-LAST:event_formWindowClosed
 
     private void formWindowClosing(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowClosing
-//		try {	
-//			for(int i = 0; i < listItem.size(); i++) {
-//				Vector itemAdded = new Vector();
-//				if(itemCount[i] > 0) {
-//					itemAdded.add(listItem.get(i));
-//					itemAdded.add(itemCount[i]);
-//					itemAdded.add(vListPriceItem.get(i));
-//				} else {
-//					continue;
-//				}
-//					listTtemAdded.add(itemAdded);
-//			}		
-//		} catch (Exception ex) {
-//			ex.printStackTrace();
-//		}
-//		
-//		System.out.println("ListItemAdded: " + createListTtemAdded());
-//		System.out.println(vListPriceItem);
-//		System.out.println(listItem);
 		try {
 			for (int i = 0; i < listItem.size(); i++) {
 				Vector itemAdded = new Vector();
@@ -408,15 +357,9 @@ public class frmSearch extends javax.swing.JFrame {
 		} catch (Exception ex) {
 			ex.printStackTrace();
 		}
-
-//		System.out.println("frmItemClient.listTtemAdded: " + frmItemClient.listTtemAdded);
-//		System.out.println("listTtemAdded: " + listTtemAdded);
-//		System.out.println("Size: " + frmItemClient.listTtemAdded.size());
-
+		
 		// Đặt lại giá trị của tất cả phẩm tử trong itemCount = 0
-//		System.out.println("So luong san pham");
 		for (int i = 0; i < listItem.size(); i++) {
-//			System.out.println(itemCount[i]);
 			itemCount[i] = 0;
 		}
 		// Xóa tất cả các phần tử trong listItem 
@@ -428,7 +371,6 @@ public class frmSearch extends javax.swing.JFrame {
     private void tbItemMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tbItemMouseClicked
 		selectedRow = tbItem.getSelectedRow();
 		displayDetails(selectedRow);
-//		System.out.println("selectedRow: " + selectedRow);
 		itemName = lbItemName.getText();
 		Connection cnt = null;
 		PreparedStatement stm = null;
@@ -467,15 +409,10 @@ public class frmSearch extends javax.swing.JFrame {
 		lbItemAmount.setText(itemAmount + "");
 		ImageIcon img = new ImageIcon(itemLinkImage);
 		imgItem.setIcon(img);
-//		lbItemPrice.setText(itemPrice);
     }//GEN-LAST:event_tbItemMouseClicked
 
 	// Button Add To Card
     private void btnAddToCartActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAddToCartActionPerformed
-		// TODO add your handling code here:
-//		setItemName(itemName);
-//		frmCart windowCart = new frmCart();
-//		windowCart.setVisible(true);
 		JOptionPane.showMessageDialog(this, "Đã thêm sản phẩm vào giỏ hàng");
 		// Mỗi lần click nút Add to cart thì sẽ tăng số sản phẩm của dòng được chọn
 		// Lên 1 đơn vị
@@ -484,7 +421,6 @@ public class frmSearch extends javax.swing.JFrame {
 			JOptionPane.showMessageDialog(this, "Số lượng sản phẩm đã vượt quá số lượng trong giỏ hàng");
 			itemCount[selectedRow] = itemAmount;
 		}
-//		System.out.println(itemCount[selectedRow]);
     }//GEN-LAST:event_btnAddToCartActionPerformed
 
 	/**

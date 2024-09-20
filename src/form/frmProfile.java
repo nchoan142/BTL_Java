@@ -48,7 +48,7 @@ public class frmProfile extends javax.swing.JFrame {
         btnChangeInfo = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
-        setTitle("WindowProfile");
+        setTitle("frmProfile");
         addWindowListener(new java.awt.event.WindowAdapter() {
             public void windowOpened(java.awt.event.WindowEvent evt) {
                 formWindowOpened(evt);

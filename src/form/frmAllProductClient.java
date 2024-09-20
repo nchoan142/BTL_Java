@@ -70,7 +70,7 @@ public class frmAllProductClient extends javax.swing.JFrame {
         lbItemAmount = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
-        setTitle("WindowAllProductClient");
+        setTitle("frmAllProductClient");
         setMinimumSize(new java.awt.Dimension(530, 296));
         addWindowListener(new java.awt.event.WindowAdapter() {
             public void windowClosing(java.awt.event.WindowEvent evt) {

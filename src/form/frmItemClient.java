@@ -4,7 +4,6 @@ import javax.swing.*;
 import java.awt.*;
 import DataBaseConnection.DataBaseConnection;
 import static form.frmLogin.getUsername;
-//import static form.frmSearch.createListTtemAdded;
 import java.sql.PreparedStatement;
 import javax.swing.*;
 import java.sql.ResultSet;
@@ -27,15 +26,15 @@ public class frmItemClient extends javax.swing.JFrame {
 //	int countClicked = 0; // Đếm số lần click button Search
 
 	frmSearch windowSearch;
-	ArrayList<String> listItemName = new ArrayList<>();
-	ArrayList<Integer> listPrice = new ArrayList<>();
-	ArrayList<Integer> listAmount = new ArrayList<>();
+	ArrayList<String> listItemName = new ArrayList<>(); // danh sách tên sản phẩm
+	ArrayList<Integer> listPrice = new ArrayList<>(); // danh sách giá sản phẩm
+	ArrayList<Integer> listAmount = new ArrayList<>(); // danh sách số lượng sản phẩm
 
 	// Lưu tên sản phẩm ở dạng lower-case
 	// sử dụng để tìm kiếm sản phẩm khi viết hoa hoặc không
 	ArrayList<String> listItemNameLowerCase = new ArrayList<>();
 	static Vector result = new Vector(); // Lưu kết quả tìm kiếm
-	static Vector<Vector> listTtemAdded = new Vector<Vector>();
+	static Vector<Vector> listTtemAdded = new Vector<Vector>(); // danh sách sản phẩm đã được thêm vào giỏ hàng
 	int countItem1 = 0;
 	int countItem2 = 0;
 	int countItem3 = 0;
@@ -154,7 +153,7 @@ public class frmItemClient extends javax.swing.JFrame {
         btnProfile = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("WindowTrending");
+        setTitle("frmItemClient");
         addWindowListener(new java.awt.event.WindowAdapter() {
             public void windowClosed(java.awt.event.WindowEvent evt) {
                 formWindowClosed(evt);
@@ -873,7 +872,6 @@ public class frmItemClient extends javax.swing.JFrame {
     }//GEN-LAST:event_btnCartActionPerformed
 
     private void btnSearchActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSearchActionPerformed
-//		countClicked++;
 		String findingName = tfSearch.getText().toLowerCase();
 		Boolean verify = false; // verify: Dùng để check xem có sản phẩm đang tìm kiếm không
 
@@ -893,12 +891,6 @@ public class frmItemClient extends javax.swing.JFrame {
 			windowSearch = new frmSearch();
 			windowSearch.setVisible(true);
 			// Nếu click button Search lần đầu sẽ tạo mới frmSearch
-//			if(countClicked == 1) {
-//				
-//			} else {
-//				windowSearch.setVisible(true);
-//			}
-
 		} else {
 			JOptionPane.showMessageDialog(this, "Không tìm thấy sản phẩm");
 		}

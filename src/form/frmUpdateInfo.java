@@ -41,8 +41,7 @@ public class frmUpdateInfo extends javax.swing.JFrame {
         tfAddress = new javax.swing.JTextField();
         tfPhoneNumber = new javax.swing.JTextField();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
-        setTitle("WindowUpdateInfo");
+        setTitle("frmUpdateInfo");
         setAlwaysOnTop(true);
         addWindowListener(new java.awt.event.WindowAdapter() {
             public void windowOpened(java.awt.event.WindowEvent evt) {

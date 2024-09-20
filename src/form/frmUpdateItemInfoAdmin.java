@@ -54,7 +54,7 @@ public class frmUpdateItemInfoAdmin extends javax.swing.JFrame {
         tfItemLinkImage = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
-        setTitle("WindowUpdateInfo");
+        setTitle("frmUpdateItemInfoAdmin");
         setAlwaysOnTop(true);
         addWindowListener(new java.awt.event.WindowAdapter() {
             public void windowOpened(java.awt.event.WindowEvent evt) {

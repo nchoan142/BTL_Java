@@ -84,7 +84,7 @@ public class frmCart extends javax.swing.JFrame {
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("Giỏ hàng");
 
-        setTitle("WindowCart");
+        setTitle("frmCart");
         addWindowListener(new java.awt.event.WindowAdapter() {
             public void windowOpened(java.awt.event.WindowEvent evt) {
                 formWindowOpened(evt);
@@ -351,7 +351,6 @@ public class frmCart extends javax.swing.JFrame {
     private void tbListItemMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tbListItemMouseClicked
 		// TODO add your handling code here:
 		selectedRow = tbListItem.getSelectedRow();
-//		selectedColumn = tbListItem.getSelectedColumn();
 		displayDetails(selectedRow);
 
 		Connection cnt = null;
@@ -420,7 +419,6 @@ public class frmCart extends javax.swing.JFrame {
 				int amountInListItem = (int) listItem.get(selectedRow).get(1);
 				int priceInListItem = (int) listItem.get(selectedRow).get(2);
 				int moneyInListItem = amountInListItem * priceInListItem;
-				//			listItem.get(selectedRow).set(3, moneyInListItem);
 				tableModel.setValueAt(moneyInListItem, selectedRow, 3);
 				// Update lbTotalAmount và lbTotalMoney
 				totalAmount = 0;

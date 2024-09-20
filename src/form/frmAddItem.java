@@ -53,6 +53,7 @@ public class frmAddItem extends javax.swing.JFrame {
         jLabel5 = new javax.swing.JLabel();
         btnAddItem = new javax.swing.JButton();
 
+        setTitle("frmAddItem");
         setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         addWindowListener(new java.awt.event.WindowAdapter() {
             public void windowClosing(java.awt.event.WindowEvent evt) {
