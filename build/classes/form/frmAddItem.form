@@ -139,12 +139,12 @@
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Component id="btnAddItem" min="-2" max="-2" attributes="0"/>
-                          <Component id="tfLinkImg" min="-2" pref="234" max="-2" attributes="0"/>
+                          <Component id="tfItemLinkImg" min="-2" pref="234" max="-2" attributes="0"/>
                           <Group type="103" alignment="0" groupAlignment="0" max="-2" attributes="0">
                               <Component id="tfItemCode" max="32767" attributes="0"/>
                               <Component id="tfItemName" alignment="0" max="32767" attributes="0"/>
-                              <Component id="tfPrice" alignment="0" max="32767" attributes="0"/>
-                              <Component id="tfAmount" alignment="0" min="-2" pref="234" max="-2" attributes="0"/>
+                              <Component id="tfItemPrice" alignment="0" max="32767" attributes="0"/>
+                              <Component id="tfItemAmount" alignment="0" min="-2" pref="234" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                       <EmptySpace max="32767" attributes="0"/>
@@ -166,17 +166,17 @@
                       </Group>
                       <EmptySpace pref="31" max="32767" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="tfPrice" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="tfItemPrice" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="jLabel2" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace pref="31" max="32767" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="tfAmount" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="tfItemAmount" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="jLabel4" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace pref="31" max="32767" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="tfLinkImg" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="tfItemLinkImg" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="jLabel5" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace pref="31" max="32767" attributes="0"/>
@@ -187,14 +187,14 @@
             </DimensionLayout>
           </Layout>
           <SubComponents>
-            <Component class="javax.swing.JTextField" name="tfPrice">
+            <Component class="javax.swing.JTextField" name="tfItemPrice">
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="tfPriceActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="tfItemPriceActionPerformed"/>
               </Events>
             </Component>
-            <Component class="javax.swing.JTextField" name="tfAmount">
+            <Component class="javax.swing.JTextField" name="tfItemAmount">
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="tfAmountActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="tfItemAmountActionPerformed"/>
               </Events>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel1">
@@ -227,9 +227,9 @@
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="tfItemNameActionPerformed"/>
               </Events>
             </Component>
-            <Component class="javax.swing.JTextField" name="tfLinkImg">
+            <Component class="javax.swing.JTextField" name="tfItemLinkImg">
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="tfLinkImgActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="tfItemLinkImgActionPerformed"/>
               </Events>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel5">
