@@ -1,7 +1,3 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
- */
 package form;
 
 import DataBaseConnection.DataBaseConnection;
@@ -26,12 +22,11 @@ import javax.swing.table.DefaultTableModel;
 public class frmCart extends javax.swing.JFrame {
 
 	int selectedRow;
-	int selectedColumn;
+//	int selectedColumn;
 	int totalAmount; // Tổng số sản phẩm
 	int totalMoney; // Tổng số tiền
 	int price; // Đơn giá
 	int money; // Thành tiền
-	int moneyUpdate; // Thành tiền sau khi click button Update
 	String itemName;
 	int itemAmount;
 	int amount;

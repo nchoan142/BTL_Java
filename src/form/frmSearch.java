@@ -280,7 +280,8 @@ public class frmSearch extends javax.swing.JFrame {
 			// DefautTableModel có 2 tham số
 			// rowCount: số dòng
 			// columnCount: số cột
-			DefaultTableModel dataTable = new DefaultTableModel(data, columnName);			// Mỗi vRow là 1 dòng trong Jtable
+			// Mỗi vRow là 1 dòng trong Jtable
+			DefaultTableModel dataTable = new DefaultTableModel(data, columnName);			
 			for (int i = 0; i < listItem.size(); i++) {
 				Vector vRow = new Vector();
 				vRow.add(listItem.get(i));
@@ -308,7 +309,6 @@ public class frmSearch extends javax.swing.JFrame {
 					listItemAmount.add(rs.getInt("so_luong"));
 				}
 			}
-
 		} catch (ClassNotFoundException ex) {
 			Logger.getLogger(frmItemClient.class.getName()).log(Level.SEVERE, null, ex);
 		} catch (SQLException ex) {
@@ -362,8 +362,9 @@ public class frmSearch extends javax.swing.JFrame {
 		for (int i = 0; i < listItem.size(); i++) {
 			itemCount[i] = 0;
 		}
-		// Xóa tất cả các phần tử trong listItem 
-		// Để khi mở frmSearch, listItem sẽ được làm mới
+		// Xóa tất cả các phần tử trong listItem, tránh trường hợp listItem bị ghi thêm dữ liệu
+		// Khi thực hiện lại phương thức search
+		// Để khi đóng frmSearch, listItem sẽ được làm mới
 		listItem.clear();
     }//GEN-LAST:event_formWindowClosing
 
@@ -400,7 +401,7 @@ public class frmSearch extends javax.swing.JFrame {
 				if (cnt != null) {
 					cnt.close();
 				}
-
+				
 			} catch (SQLException ex) {
 				Logger.getLogger(frmLogin.class.getName()).log(Level.SEVERE, null, ex);
 			}
