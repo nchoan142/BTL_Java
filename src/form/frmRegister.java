@@ -45,6 +45,8 @@ public class frmRegister extends javax.swing.JFrame {
         tfResPhone = new javax.swing.JTextField();
         btnRes = new javax.swing.JButton();
 
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+
         pnCover.setBackground(new java.awt.Color(255, 255, 255));
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
