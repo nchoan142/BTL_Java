@@ -1,12 +1,7 @@
 package form;
 
 import DataBaseConnection.DataBaseConnection;
-import static form.frmSearch.itemCount;
-import static form.frmSearch.itemInTable;
-import static form.frmSearch.listItem;
 import static form.frmSearch.listItemAmount;
-import static form.frmSearch.listTtemAdded;
-import static form.frmSearch.vListPriceItem;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -27,7 +22,6 @@ public class frmAllProductClient extends javax.swing.JFrame {
 	Vector listItem = new Vector();
 	static Vector listTtemAdded = new Vector(); // Danh sách sản phẩm đã được thêm vào giỏ hàng
 	static Vector vListPriceItem = new Vector(); // vector ListPriceItem
-	
 	static String itemName;
 	int itemPrice;
 	int itemAmount;
@@ -35,8 +29,6 @@ public class frmAllProductClient extends javax.swing.JFrame {
 	int selectedRow;
 	int itemInTable; // Số lượng sản phẩm trong bảng
 	int[] itemCount; // Đếm số lượng của từng sản phẩm trong bảng khi click nút Add to card
-	
-	
 	
 	public frmAllProductClient() {
 		initComponents();
@@ -248,7 +240,6 @@ public class frmAllProductClient extends javax.swing.JFrame {
 			cnt = DataBaseConnection.getConnection();
 			String sql = "SELECT ten_san_pham FROM tbsanpham";
 			stm = cnt.prepareStatement(sql);
-//			stm.setString(1, itemName);
 			ResultSet rs = stm.executeQuery();
 
 			while (rs.next()) {
@@ -281,7 +272,6 @@ public class frmAllProductClient extends javax.swing.JFrame {
 				Logger.getLogger(frmLogin.class.getName()).log(Level.SEVERE, null, ex);
 			}
 		}
-		
 		
 		stm = null;
 		try {

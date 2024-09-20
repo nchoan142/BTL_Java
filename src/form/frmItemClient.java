@@ -750,7 +750,6 @@ public class frmItemClient extends javax.swing.JFrame {
 		int price;
 		int money;
 		Vector itemAdded;
-		ArrayList<Integer> listItemAmount = new ArrayList<>();
 		
 		if (countItem1 > 0) {
 			if(countItem1 > listAmount.get(0)) {
@@ -907,14 +906,12 @@ public class frmItemClient extends javax.swing.JFrame {
     }//GEN-LAST:event_btnProfileActionPerformed
 
     private void btnAdd4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAdd4ActionPerformed
-		// TODO add your handling code here:
 		countItem4 += 1;
 		JOptionPane.showMessageDialog(this,
 			"Đã thêm sản phẩm vào giỏ hàng");
     }//GEN-LAST:event_btnAdd4ActionPerformed
 
     private void btnAdd1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAdd1ActionPerformed
-		// TODO add your handling code here:
 		countItem1 += 1;
 		JOptionPane.showMessageDialog(this,
 			"Đã thêm sản phẩm vào giỏ hàng");
@@ -933,28 +930,24 @@ public class frmItemClient extends javax.swing.JFrame {
     }//GEN-LAST:event_formWindowClosed
 
     private void btnAdd2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAdd2ActionPerformed
-		// TODO add your handling code here:
 		countItem2 += 1;
 		JOptionPane.showMessageDialog(this,
 			"Đã thêm sản phẩm vào giỏ hàng");
     }//GEN-LAST:event_btnAdd2ActionPerformed
 
     private void btnAdd3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAdd3ActionPerformed
-		// TODO add your handling code here:
 		countItem3 += 1;
 		JOptionPane.showMessageDialog(this,
 			"Đã thêm sản phẩm vào giỏ hàng");
     }//GEN-LAST:event_btnAdd3ActionPerformed
 
     private void btnAdd5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAdd5ActionPerformed
-		// TODO add your handling code here:
 		countItem5 += 1;
 		JOptionPane.showMessageDialog(this,
 			"Đã thêm sản phẩm vào giỏ hàng");
     }//GEN-LAST:event_btnAdd5ActionPerformed
 
     private void btnAdd6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAdd6ActionPerformed
-		// TODO add your handling code here:
 		countItem6 += 1;
 		JOptionPane.showMessageDialog(this,
 			"Đã thêm sản phẩm vào giỏ hàng");

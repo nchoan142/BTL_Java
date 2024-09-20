@@ -8,8 +8,7 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JOptionPane;
 
-/**
- *
+/*
  * @author NguyenCongHoan
  */
 public class frmUpdateInfo extends javax.swing.JFrame {
@@ -177,9 +176,8 @@ public class frmUpdateInfo extends javax.swing.JFrame {
     private void btnChangeInfoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnChangeInfoActionPerformed
         Connection cnt = null;
 		PreparedStatement stm = null;
-		
+	
 		try {
-			
 			cnt = DataBaseConnection.getConnection();
 			String updateSQL1 = "UPDATE tbkhachhang SET pass_word = ? WHERE user_name = ?";
 			String updateSQL2 = "UPDATE tbkhachhang SET ten = ? WHERE user_name = ?";
@@ -208,7 +206,6 @@ public class frmUpdateInfo extends javax.swing.JFrame {
 					stm.setString(1, name);
 					stm.setString(2, frmLogin.username);
 					stm.executeUpdate();
-
 				}
 				
 				if (!address.isEmpty()) {
@@ -217,7 +214,6 @@ public class frmUpdateInfo extends javax.swing.JFrame {
 					stm.setString(1, address);
 					stm.setString(2, frmLogin.username);
 					stm.executeUpdate();
-
 				}
 				
 				if (!phoneNumber.isEmpty()) {
@@ -226,7 +222,6 @@ public class frmUpdateInfo extends javax.swing.JFrame {
 					stm.setString(1, phoneNumber);
 					stm.setString(2, frmLogin.username);
 					stm.executeUpdate();
-
 				}
 			}
 		} catch (Exception ex) {

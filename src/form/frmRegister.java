@@ -10,8 +10,7 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JOptionPane;
 
-/**
- *
+/*
  * @author NguyenCongHoan
  */
 public class frmRegister extends javax.swing.JFrame {
@@ -234,7 +233,6 @@ public class frmRegister extends javax.swing.JFrame {
     private void tfResPhoneActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tfResPhoneActionPerformed
 		// TODO add your handling code here:
     }//GEN-LAST:event_tfResPhoneActionPerformed
-
     private void btnResActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnResActionPerformed
 		Connection cnt = null;
 		PreparedStatement stm1 = null;

@@ -22,11 +22,8 @@ import javax.swing.table.DefaultTableModel;
 public class frmCart extends javax.swing.JFrame {
 
 	int selectedRow;
-//	int selectedColumn;
-	int totalAmount; // Tổng số sản phẩm
-	int totalMoney; // Tổng số tiền
-	int price; // Đơn giá
-	int money; // Thành tiền
+	int totalAmount; // Tổng số sản phẩm trong giỏ hàng
+	int totalMoney; // Tổng số tiền của đơn hàng
 	String itemName;
 	int itemAmount;
 	int amount;
@@ -344,7 +341,6 @@ public class frmCart extends javax.swing.JFrame {
     }//GEN-LAST:event_formWindowOpened
 
     private void tbListItemMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tbListItemMouseClicked
-		// TODO add your handling code here:
 		selectedRow = tbListItem.getSelectedRow();
 		displayDetails(selectedRow);
 
@@ -384,7 +380,6 @@ public class frmCart extends javax.swing.JFrame {
     }//GEN-LAST:event_tbListItemMouseClicked
 
     private void btnDeleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDeleteActionPerformed
-		// TODO add your handling code here:
 		try {
 			totalAmount -= (int) listItem.get(selectedRow).get(1);
 			totalMoney -= (int) listItem.get(selectedRow).get(3);
@@ -436,8 +431,6 @@ public class frmCart extends javax.swing.JFrame {
     }//GEN-LAST:event_tfAmountActionPerformed
 
     private void btnPaymentActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPaymentActionPerformed
-		// TODO add your handling code here:
-		
 		JOptionPane.showMessageDialog(frmCart.this,
 			"Thanh toán thành công");
 		ArrayList<Integer> listItemID = new ArrayList<>();

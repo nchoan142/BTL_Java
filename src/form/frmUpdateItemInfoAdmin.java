@@ -18,14 +18,14 @@ import static form.frmAllProductAdmin.listID;
  */
 public class frmUpdateItemInfoAdmin extends javax.swing.JFrame {
 
+	int id;
 //	static Vector listID = new Vector();
 //	listID = frmAllProductAdmin.listID;
-	int id;
-	String itemCode = "";
-	String itemName = "";
-	int itemPrice;
-	int itemAmount;
-	String itemLinkImage = "";
+//	String itemCode = "";
+//	String itemName = "";
+//	int itemPrice;
+//	int itemAmount;
+//	String itemLinkImage = "";
 	
 	public frmUpdateItemInfoAdmin() {
 		initComponents();
@@ -213,7 +213,6 @@ public class frmUpdateItemInfoAdmin extends javax.swing.JFrame {
 		PreparedStatement stm = null;
 		
 		try {
-			
 			cnt = DataBaseConnection.getConnection();
 			String updateSQL1 = "UPDATE tbsanpham SET ma_san_pham = ? WHERE id = ?";
 			String updateSQL2 = "UPDATE tbsanpham SET ten_san_pham = ? WHERE id = ?";
@@ -238,27 +237,20 @@ public class frmUpdateItemInfoAdmin extends javax.swing.JFrame {
 				stm.setInt(2, id);
 				stm.executeUpdate();
 
-				
 				stm = cnt.prepareStatement(updateSQL2);
 				stm.setString(1, itemName);
 				stm.setInt(2, id);
 				stm.executeUpdate();
 
-				
-				
 				stm = cnt.prepareStatement(updateSQL3);
 				stm.setInt(1, Integer.parseInt(itemPrice));
 				stm.setInt(2, id);
 				stm.executeUpdate();
 
-				
-				
 				stm = cnt.prepareStatement(updateSQL4);
 				stm.setInt(1, Integer.parseInt(itemAmount));
 				stm.setInt(2, id);
 				stm.executeUpdate();
-
-			
 				
 				stm = cnt.prepareStatement(updateSQL5);
 				stm.setString(1, linkImage);

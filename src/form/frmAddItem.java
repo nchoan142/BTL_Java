@@ -247,7 +247,6 @@ public class frmAddItem extends javax.swing.JFrame {
                     stm.setInt(4, Integer.parseInt(itemAmount));
                     stm.setString(5, itemLinkImage);
                     stm.executeUpdate();
-
                 }
             }
 			newRow.add(itemCode);

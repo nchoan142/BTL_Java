@@ -190,7 +190,7 @@ public class frmLogin {
 			}
 
 		});
-		// Add components to the frame
+
 		frame.add(lblUsernamename);
 		frame.add(lblPassword);
 		frame.add(tfUsername);
@@ -198,7 +198,6 @@ public class frmLogin {
 		frame.add(btnLogin);
 		frame.add(btnRegister);
 
-		// Frame settings
 		frame.setSize(400, 400);
 		frame.setLayout(null);
 		frame.setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
@@ -214,7 +213,6 @@ public class frmLogin {
 	}
 
 	public static void main(String[] args) {
-//        frmDangNhap login = new frmDangNhap();
 		java.awt.EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {

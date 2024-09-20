@@ -10,14 +10,12 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.table.DefaultTableModel;
 
-/**
- *
+/*
  * @author NguyenCongHoan
  */
 public class frmProfile extends javax.swing.JFrame {
 	Vector data = new Vector();
 
-	
 	public frmProfile() {
 		initComponents();
 	}
@@ -228,7 +226,6 @@ public class frmProfile extends javax.swing.JFrame {
     }//GEN-LAST:event_btnChangeInfoActionPerformed
 
     private void formWindowOpened(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowOpened
-        // TODO add your handling code here:
 		Vector columnName = new Vector();
 		columnName.add("Sản phẩm đã mua");
 		columnName.add("Giá trị đơn hàng");
@@ -247,8 +244,8 @@ public class frmProfile extends javax.swing.JFrame {
 				vRow.add(rs.getInt("so_luong_san_pham"));
 				vRow.add(rs.getInt("gia_tri_don_hang"));
 				data.add(vRow);
-				
 			}
+			
 		DefaultTableModel dataTable = new DefaultTableModel(data, columnName);
 		tbHistory.setModel(dataTable);
 
@@ -265,7 +262,6 @@ public class frmProfile extends javax.swing.JFrame {
 				if (cnt != null) {
 					cnt.close();
 				}
-
 			} catch (SQLException ex) {
 				Logger.getLogger(frmLogin.class.getName()).log(Level.SEVERE, null, ex);
 			}
@@ -285,7 +281,6 @@ public class frmProfile extends javax.swing.JFrame {
 				lbAddress.setText(rs.getString("dia_chi"));
 				lbPhoneNumber.setText(rs.getString("so_dien_thoai"));
 			}
-
 		} catch (ClassNotFoundException ex) {
 			Logger.getLogger(frmItemClient.class.getName()).log(Level.SEVERE, null, ex);
 		} catch (SQLException ex) {
@@ -299,7 +294,6 @@ public class frmProfile extends javax.swing.JFrame {
 				if (cnt != null) {
 					cnt.close();
 				}
-
 			} catch (SQLException ex) {
 				Logger.getLogger(frmLogin.class.getName()).log(Level.SEVERE, null, ex);
 			}
