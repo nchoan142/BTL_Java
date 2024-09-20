@@ -4,8 +4,15 @@
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
             <file>file:/D:/NetBeans/BTL_Java/BTL_Java/src/form/frmProfile.java</file>
+            <file>file:/D:/NetBeans/BTL_Java/BTL_Java/src/form/frmAddItem.java</file>
+            <file>file:/D:/NetBeans/BTL_Java/BTL_Java/src/form/frmSearch.java</file>
             <file>file:/D:/NetBeans/BTL_Java/BTL_Java/src/form/frmUpdateInfo.java</file>
+            <file>file:/D:/NetBeans/BTL_Java/BTL_Java/src/form/frmAllProductAdmin.java</file>
+            <file>file:/D:/NetBeans/BTL_Java/BTL_Java/src/form/frmItemClient.java</file>
+            <file>file:/D:/NetBeans/BTL_Java/BTL_Java/src/form/frmUpdateItemInfoAdmin.java</file>
+            <file>file:/D:/NetBeans/BTL_Java/BTL_Java/src/form/frmCart.java</file>
             <file>file:/D:/NetBeans/BTL_Java/BTL_Java/src/form/frmRegister.java</file>
+            <file>file:/D:/NetBeans/BTL_Java/BTL_Java/src/form/frmAllProductClient.java</file>
         </group>
     </open-files>
 </project-private>

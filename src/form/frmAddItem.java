@@ -38,15 +38,15 @@ public class frmAddItem extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         jLabel6 = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
-        tfPrice = new javax.swing.JTextField();
-        tfAmount = new javax.swing.JTextField();
+        tfItemPrice = new javax.swing.JTextField();
+        tfItemAmount = new javax.swing.JTextField();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         tfItemCode = new javax.swing.JTextField();
         tfItemName = new javax.swing.JTextField();
-        tfLinkImg = new javax.swing.JTextField();
+        tfItemLinkImg = new javax.swing.JTextField();
         jLabel5 = new javax.swing.JLabel();
         btnAddItem = new javax.swing.JButton();
 
@@ -89,15 +89,15 @@ public class frmAddItem extends javax.swing.JFrame {
         jPanel2.setBackground(new java.awt.Color(255, 255, 255));
         jPanel2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
-        tfPrice.addActionListener(new java.awt.event.ActionListener() {
+        tfItemPrice.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                tfPriceActionPerformed(evt);
+                tfItemPriceActionPerformed(evt);
             }
         });
 
-        tfAmount.addActionListener(new java.awt.event.ActionListener() {
+        tfItemAmount.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                tfAmountActionPerformed(evt);
+                tfItemAmountActionPerformed(evt);
             }
         });
 
@@ -121,9 +121,9 @@ public class frmAddItem extends javax.swing.JFrame {
             }
         });
 
-        tfLinkImg.addActionListener(new java.awt.event.ActionListener() {
+        tfItemLinkImg.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                tfLinkImgActionPerformed(evt);
+                tfItemLinkImgActionPerformed(evt);
             }
         });
 
@@ -153,12 +153,12 @@ public class frmAddItem extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(btnAddItem)
-                    .addComponent(tfLinkImg, javax.swing.GroupLayout.PREFERRED_SIZE, 234, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(tfItemLinkImg, javax.swing.GroupLayout.PREFERRED_SIZE, 234, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                         .addComponent(tfItemCode)
                         .addComponent(tfItemName)
-                        .addComponent(tfPrice)
-                        .addComponent(tfAmount, javax.swing.GroupLayout.PREFERRED_SIZE, 234, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(tfItemPrice)
+                        .addComponent(tfItemAmount, javax.swing.GroupLayout.PREFERRED_SIZE, 234, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
@@ -174,15 +174,15 @@ public class frmAddItem extends javax.swing.JFrame {
                     .addComponent(tfItemName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 31, Short.MAX_VALUE)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(tfPrice, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(tfItemPrice, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel2))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 31, Short.MAX_VALUE)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(tfAmount, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(tfItemAmount, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel4))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 31, Short.MAX_VALUE)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(tfLinkImg, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(tfItemLinkImg, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel5))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 31, Short.MAX_VALUE)
                 .addComponent(btnAddItem)
@@ -226,10 +226,10 @@ public class frmAddItem extends javax.swing.JFrame {
             cnt = DataBaseConnection.getConnection();
             if (cnt != null) {
                 itemCode = tfItemCode.getText();
-                itemName = tfItemCode.getText();
-                itemPrice = tfItemCode.getText();
-                itemAmount = tfItemCode.getText();
-                itemLinkImage = tfItemCode.getText();
+                itemName = tfItemName.getText();
+                itemPrice = tfItemPrice.getText();
+                itemAmount = tfItemAmount.getText();
+                itemLinkImage = tfItemLinkImg.getText();
 
                 // Nếu có trường bị bỏ trống thông tin
                 // Thì yêu cầu người dùng nhập thông tin cho trường đó
@@ -243,7 +243,9 @@ public class frmAddItem extends javax.swing.JFrame {
                     stm.setInt(3, Integer.parseInt(itemPrice));
                     stm.setInt(4, Integer.parseInt(itemAmount));
                     stm.setString(5, itemLinkImage);
-                    stm.executeUpdate();
+                    int rowEffected = stm.executeUpdate();
+					System.out.println("rowEffected: " + rowEffected);
+					JOptionPane.showMessageDialog(this, "Đã thêm sản phẩm");
                 }
             }
 			newRow.add(itemCode);
@@ -253,7 +255,6 @@ public class frmAddItem extends javax.swing.JFrame {
 			newRow.add(itemLinkImage);
 			frmAllProductAdmin.listItem.add(itemCode);
 			frmAllProductAdmin.dataTable1.addRow(newRow);
-            JOptionPane.showMessageDialog(this, "Đã thêm sản phẩm");
         } catch (ClassNotFoundException ex) {
             Logger.getLogger(frmRegister.class.getName()).log(Level.SEVERE, null, ex);
         } catch (SQLException ex) {
@@ -272,9 +273,9 @@ public class frmAddItem extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_btnAddItemActionPerformed
 
-    private void tfLinkImgActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tfLinkImgActionPerformed
+    private void tfItemLinkImgActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tfItemLinkImgActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_tfLinkImgActionPerformed
+    }//GEN-LAST:event_tfItemLinkImgActionPerformed
 
     private void tfItemNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tfItemNameActionPerformed
         // TODO add your handling code here:
@@ -284,13 +285,13 @@ public class frmAddItem extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_tfItemCodeActionPerformed
 
-    private void tfAmountActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tfAmountActionPerformed
+    private void tfItemAmountActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tfItemAmountActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_tfAmountActionPerformed
+    }//GEN-LAST:event_tfItemAmountActionPerformed
 
-    private void tfPriceActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tfPriceActionPerformed
+    private void tfItemPriceActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tfItemPriceActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_tfPriceActionPerformed
+    }//GEN-LAST:event_tfItemPriceActionPerformed
 
     private void formWindowClosing(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowClosing
         // TODO add your handling code here:
@@ -345,10 +346,10 @@ public class frmAddItem extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel pnCover;
-    private javax.swing.JTextField tfAmount;
+    private javax.swing.JTextField tfItemAmount;
     private javax.swing.JTextField tfItemCode;
+    private javax.swing.JTextField tfItemLinkImg;
     private javax.swing.JTextField tfItemName;
-    private javax.swing.JTextField tfLinkImg;
-    private javax.swing.JTextField tfPrice;
+    private javax.swing.JTextField tfItemPrice;
     // End of variables declaration//GEN-END:variables
 }
