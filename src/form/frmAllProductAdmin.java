@@ -305,7 +305,7 @@ public class frmAllProductAdmin extends javax.swing.JFrame {
 		columnName.add("Tên sản phẩm");
 		columnName.add("Đơn giá");
 		columnName.add("Số lượng");
-		columnName.add("Link image");
+		columnName.add("Link ảnh");
 		
 		Connection cnt = null;
 		PreparedStatement stm = null;

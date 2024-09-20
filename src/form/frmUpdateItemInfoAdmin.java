@@ -3,15 +3,10 @@ package form;
 import DataBaseConnection.DataBaseConnection;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
-import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.util.Vector;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
-import javax.swing.table.DefaultTableModel;
-import static form.frmAllProductAdmin.listID;
 
 /**
  * @author NguyenCongHoan

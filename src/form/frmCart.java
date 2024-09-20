@@ -1,8 +1,6 @@
 package form;
 
 import DataBaseConnection.DataBaseConnection;
-import static form.frmSearch.getItemName;
-import static form.frmSearch.itemName;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -551,6 +549,7 @@ public class frmCart extends javax.swing.JFrame {
 				Logger.getLogger(frmLogin.class.getName()).log(Level.SEVERE, null, ex);
 			}
 		}
+		this.dispose();
     }//GEN-LAST:event_btnPaymentActionPerformed
 
 	/**

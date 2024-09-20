@@ -69,7 +69,7 @@ public class frmUpdateInfo extends javax.swing.JFrame {
             .addComponent(jLabel5, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 52, Short.MAX_VALUE)
         );
 
-        jLabel1.setText("Password:");
+        jLabel1.setText("Mật khẩu:");
 
         jLabel2.setText("Họ và tên:");
 
