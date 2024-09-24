@@ -16,7 +16,7 @@ import java.util.logging.Logger;
 public class frmLogin {
 	static String username;
 	
-
+	// Hello NCHoan
 	public frmLogin() throws ClassNotFoundException {
 		JFrame frame = new JFrame("Login Window");
 		
